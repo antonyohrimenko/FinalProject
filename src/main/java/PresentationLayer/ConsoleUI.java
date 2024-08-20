@@ -16,12 +16,14 @@ public class ConsoleUI {
         this.scanner = new Scanner(System.in);
     }
 
+    // запуск отображения на экран
     public void start() {
         System.out.println("Добро пожаловать! Выберите действие:");
         while (true) {
             System.out.println("1. Регистрация");
             System.out.println("2. Авторизация");
-            System.out.println("3. Выход");
+           // System.out.println("3. Восстановить пароль");
+            System.out.println("0. Выход");
 
             String choice = scanner.nextLine();
 
@@ -33,6 +35,9 @@ public class ConsoleUI {
                     authenticate();
                     break;
                 case "3":
+                    //recoverPassword();
+                    break;
+                case "0":
                     System.out.println("До свидания!");
                     return;
                 default:

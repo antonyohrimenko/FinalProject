@@ -1,14 +1,15 @@
 package DataAccessLayer;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 public class User {
     private String username;
     private String passwordHash;
     private String salt;
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
-    public User(String username, String passwordHash, String salt, LocalDateTime createdAt) {
+    public User(String username, String passwordHash, String salt, ZonedDateTime createdAt) {
         this.username = username;
         this.passwordHash = passwordHash;
         this.salt = salt;
@@ -27,7 +28,8 @@ public class User {
         return salt;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public ZonedDateTime getCreatedAt() {
         return createdAt;
     }
+
 }
